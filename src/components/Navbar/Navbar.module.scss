@@ -1,15 +1,44 @@
 .container {
   display: flex;
   align-items: center;
-  padding: 1rem 3rem 1rem 2rem;
+  padding: 2rem 4rem 1rem 3rem;
   justify-content: space-between;
   margin: 1.2rem 0 0 1.2rem;
 
   .socialMedia {
-    gap: 1.5rem;
+    gap: 2rem;
     display: flex;
     align-items: center;
     color: white;
+
+    .iconBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .link {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          color: #c5c5c5;
+          display: inline-block;
+          transition: all 100ms;
+
+          &:hover,
+          &:active {
+            color: #fff;
+            width: 1.75rem;
+            height: 1.75rem;
+          }
+        }
+      }
+    }
   }
 
   .logo {
