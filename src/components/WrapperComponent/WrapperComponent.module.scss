@@ -5,35 +5,13 @@
   align-items: center;
   justify-content: center;
   background-color: #1b1834;
+  //background: linear-gradient(to right top, #1b1834, #740146);
 
   .container {
-    width: 90%;
+    width: 80%;
     height: 100vh;
     position: relative;
     max-height: 50rem;
-
-    /* &::after {
-      content: "";
-      width: 5rem;
-      height: 5rem;
-      display: block;
-      position: absolute;
-      background-color: red;
-      border-top-left-radius: 10px;
-    }
-
-    &::before {
-      content: "";
-      bottom: 0;
-      right: 0;
-      width: 5rem;
-      height: 5rem;
-      z-index: 222;
-      display: block;
-      position: absolute;
-      background-color: red;
-      border-bottom-right-radius: 10px;
-    } */
   }
 
   .upperEdge {
@@ -47,11 +25,11 @@
     border-bottom: transparent;
     border-top-left-radius: 10px;
 
-    .box1 {
-      width: 0;
-      height: 0;
-      right: 0;
+    &::after {
+      content: "";
       top: -1.2rem;
+      right: 0;
+      display: block;
       position: absolute;
       border-top: 0.6rem solid transparent;
       border-right: 0.6rem solid #1b1834;
@@ -59,15 +37,16 @@
       border-left: 0.6rem solid transparent;
     }
 
-    .box2 {
-      width: 0;
-      height: 0;
+    &::before {
+      content: "";
       bottom: 0;
-      left: -1.15rem;
+      left: -1.1rem;
+      z-index: 222;
+      display: block;
       position: absolute;
       border-top: 0.6rem solid transparent;
-      border-right: 0.65rem solid #1b1834;
-      border-bottom: 0.6rem solid #1b1834;
+      border-right: 0.6rem solid #1b1834;
+      border-bottom: 0.7rem solid #1b1834;
       border-left: 0.6rem solid transparent;
     }
   }
@@ -83,28 +62,29 @@
     border-top: transparent;
     border-bottom-right-radius: 10px;
 
-    .box3 {
-      width: 0;
-      height: 0;
+    &::after {
+      content: "";
       top: 0;
       right: -1.1rem;
+      display: block;
       position: absolute;
       border-top: 0.6rem solid #1b1834;
-      border-left: 0.6rem solid #1b1834;
       border-right: 0.6rem solid transparent;
       border-bottom: 0.7rem solid transparent;
+      border-left: 0.6rem solid #1b1834;
     }
 
-    .box4 {
-      width: 0;
-      height: 0;
+    &::before {
+      content: "";
+      bottom: -1.25rem;
       left: 0;
-      bottom: -1.1rem;
+      z-index: 222;
+      display: block;
       position: absolute;
       border-top: 0.6rem solid #1b1834;
+      border-right: 0.6rem solid transparent;
+      border-bottom: 0.7rem solid transparent;
       border-left: 0.6rem solid #1b1834;
-      border-right: 0.65rem solid transparent;
-      border-bottom: 0.6rem solid transparent;
     }
   }
 }
