@@ -9,20 +9,29 @@ const Navbar = (props: Props) => {
       <div className={styles.logo}>LOGO</div>
       <div className={styles.socialMedia}>
         <div className={styles.iconBox}>
-          <a className={styles.link} href="mailto:adnanali6688@gmail.com">
+          <a
+            className={styles.link}
+            target="_blank"
+            href="mailto:adnanali6688@gmail.com"
+          >
             {<FaEnvelope className={styles.icon} />}
           </a>
         </div>
         <div className={styles.iconBox}>
           <a
             className={styles.link}
+            target="_blank"
             href="https://www.linkedin.com/in/adnan-ali-5b9736111/"
           >
             {<FaLinkedin className={styles.icon} />}
           </a>
         </div>
         <div className={styles.iconBox}>
-          <a className={styles.link} href="https://github.com/adnan725">
+          <a
+            className={styles.link}
+            target="_blank"
+            href="https://github.com/adnan725"
+          >
             {<FaGithub className={styles.icon} />}
           </a>
         </div>

@@ -1,0 +1,21 @@
+//Colors
+
+$color-primary: #1b1834;
+
+$color-secondary: #99005b;
+
+$color-white: #fff;
+$color-gray: #c5c5c5;
+
+@mixin flex($direction, $align-items: "", $justify-content: "") {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $align-items != "" {
+    align-items: $align-items;
+  }
+
+  @if $justify-content != "" {
+    justify-content: $justify-content;
+  }
+}
