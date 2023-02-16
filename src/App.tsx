@@ -1,5 +1,11 @@
+import WrapperComponent from "./components/WrapperComponent";
+
 function App() {
-  return <div className="App">App</div>;
+  return (
+    <div>
+      <WrapperComponent />
+    </div>
+  );
 }
 
 export default App;
