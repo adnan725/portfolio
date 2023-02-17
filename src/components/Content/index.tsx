@@ -9,10 +9,30 @@ const Content = (props: Props) => {
       <div className={styles.linksWrapper}>
         <p className={styles.projectsHeading}>Projects</p>
         <div className={styles.links}>
-          <p>Link 1</p>
-          <p>Link 1</p>
-          <p>Link 1</p>
-          <p>Link 1</p>
+          <p
+            className={`${styles.link} ${styles.borderGredient} 
+            ${styles.borderColor}`}
+          >
+            About
+          </p>
+          <p
+            className={`${styles.link} ${styles.borderGredient} 
+            ${styles.borderColor}`}
+          >
+            Skills
+          </p>
+          <p
+            className={`${styles.link} ${styles.borderGredient} 
+            ${styles.borderColor}`}
+          >
+            Experience
+          </p>
+          <p
+            className={`${styles.link} ${styles.borderGredient} 
+            ${styles.borderColor}`}
+          >
+            Projects
+          </p>
         </div>
       </div>
     </div>
