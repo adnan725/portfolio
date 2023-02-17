@@ -1,12 +1,13 @@
 //Colors
 
-$color-primary: #1b1834;
+$color-primary: #121024;
 $color-primary-light: #743ad5;
 
 $color-secondary: #99005b;
 
 $color-white: #fff;
 $color-gray: #c5c5c5;
+$color-gray-light: #f0efef;
 
 @mixin flex($direction, $align-items: "", $justify-content: "") {
   display: flex;
