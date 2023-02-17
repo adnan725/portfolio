@@ -30,6 +30,20 @@
       border-top: 2px solid $color-secondary;
       border-left: 2px solid $color-secondary;
     }
+
+    .projectsHeading {
+      font-size: 2rem;
+      position: absolute;
+      top: 28%;
+    }
+
+    .links {
+      top: 40%;
+      gap: 1rem;
+      padding: 3rem;
+      position: absolute;
+      @include flex(column, flex-start, center);
+    }
   }
 }
 

@@ -7,7 +7,13 @@ const Content = (props: Props) => {
     <div className={styles.container}>
       <div className={styles.descriptionWrapper}>Left</div>
       <div className={styles.linksWrapper}>
-        <h3>Projects</h3>
+        <p className={styles.projectsHeading}>Projects</p>
+        <div className={styles.links}>
+          <p>Link 1</p>
+          <p>Link 1</p>
+          <p>Link 1</p>
+          <p>Link 1</p>
+        </div>
       </div>
     </div>
   );
