@@ -1,15 +1,15 @@
 @import "../../styles/variables";
 
 .mainContainer {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   @include flex(row, center, center);
   background-color: $color-primary;
   //background: linear-gradient(to right top, #1b1834, #740146);
 
   .container {
-    width: 80%;
-    height: 100vh;
+    width: 67%;
+    height: 100%;
     position: relative;
     max-height: 50rem;
   }
@@ -86,5 +86,25 @@
       border-right: 0.6rem solid transparent;
       border-bottom: 0.7rem solid transparent;
     }
+  }
+}
+
+@media (max-width: 1280px) {
+  .mainContainer {
+    width: 100%;
+    height: 100vh;
+    @include flex(row, flex-start, center);
+  }
+
+  .container {
+    margin-top: 5rem !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin-top: 0 !important;
   }
 }

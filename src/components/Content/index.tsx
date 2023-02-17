@@ -5,7 +5,10 @@ type Props = {};
 const Content = (props: Props) => {
   return (
     <div className={styles.container}>
-      <div>Content</div>
+      <div className={styles.descriptionWrapper}>Left</div>
+      <div className={styles.linksWrapper}>
+        <h3>Projects</h3>
+      </div>
     </div>
   );
 };

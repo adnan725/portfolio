@@ -2,4 +2,53 @@
 
 .container {
   height: 70%;
+  color: $color-gray;
+  @include flex(row, center, center);
+
+  .descriptionWrapper {
+    height: 100%;
+    flex-basis: 53%;
+    padding-left: 4rem;
+    @include flex(row, center, flex-start);
+  }
+
+  .linksWrapper {
+    height: 100%;
+    flex-basis: 32%;
+    position: relative;
+    @include flex(row, center, flex-start);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 6rem;
+      height: 6rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top-left-radius: 10px;
+      border-top: 2px solid $color-secondary;
+      border-left: 2px solid $color-secondary;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 3rem;
+    @include flex(column, "", center);
+
+    .linksWrapper,
+    .descriptionWrapper {
+      width: 100% !important;
+    }
+
+    .descriptionWrapper {
+      flex-basis: 53%;
+    }
+
+    .linksWrapper {
+      flex-basis: 45%;
+    }
+  }
 }

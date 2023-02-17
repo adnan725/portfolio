@@ -2,9 +2,14 @@
 
 .container {
   height: 15%;
-  margin: 1.2rem 0 0 1.2rem;
+  margin: 0.5rem 0 0 1.2rem;
   padding: 2rem 4rem 1rem 3rem;
   @include flex(row, center, space-between);
+
+  .logo {
+    font-size: 1.2rem;
+    color: $color-white;
+  }
 
   .socialMedia {
     gap: 2rem;
@@ -31,10 +36,5 @@
         }
       }
     }
-  }
-
-  .logo {
-    font-size: 1.2rem;
-    color: $color-white;
   }
 }
