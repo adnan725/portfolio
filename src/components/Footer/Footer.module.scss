@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+
+.container {
+  width: 90%;
+  padding: 2rem;
+  margin: 1.2rem 0 0 1.2rem;
+  @include flex(row, center, flex-end);
+
+  .footer {
+    color: $color-gray;
+  }
+}
