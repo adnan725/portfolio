@@ -21,8 +21,17 @@
       border-left: 2px solid $color-secondary;
       padding-left: 1.5rem;
 
-      p {
+      .paragraph {
         font-size: 0.9rem;
+        transition: all 500ms ease-in-out;
+
+        .active {
+          opacity: 1;
+        }
+
+        .inActive {
+          opacity: 0;
+        }
       }
     }
   }
