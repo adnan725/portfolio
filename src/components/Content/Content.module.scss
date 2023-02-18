@@ -20,11 +20,6 @@
     .content {
       border-left: 2px solid $color-secondary;
       padding-left: 1.5rem;
-
-      .paragraph {
-        font-size: 0.9rem;
-        line-height: 1.5rem;
-      }
     }
   }
 
@@ -69,15 +64,15 @@
       .borderColor {
         border-image-source: linear-gradient(
           to left,
-          $color-primary-light,
-          $color-secondary
+          $color-green,
+          $color-pink
         );
 
         &:hover {
           border-image-source: linear-gradient(
             to left,
-            $color-secondary,
-            $color-primary-light
+            $color-pink,
+            $color-green
           );
         }
       }

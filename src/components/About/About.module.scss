@@ -1,0 +1,8 @@
+.paragraph {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+
+  p:nth-child(1) {
+    margin-bottom: 0.5rem;
+  }
+}
