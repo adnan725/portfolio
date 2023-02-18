@@ -1,6 +1,7 @@
 import styles from "./Content.module.scss";
 import React, { useState } from "react";
 import About from "../About";
+import Skills from "../Skills";
 
 type Props = {};
 
@@ -21,11 +22,7 @@ const Content = (props: Props) => {
               <p className={styles.paragraph}>{<About />}</p>
             )}
             {activeLink === "skills" && (
-              <p className={styles.paragraph}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias necessitatibus architecto laudantium numquam magni
-                incidunt vel nulla laboriosam maiore
-              </p>
+              <p className={styles.paragraph}>{<Skills />}</p>
             )}
             {activeLink === "experience" && (
               <p className={styles.paragraph}>
