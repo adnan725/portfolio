@@ -2,6 +2,7 @@ import styles from "./Content.module.scss";
 import React, { useState } from "react";
 import About from "../About";
 import Skills from "../Skills";
+import Experience from "../Experience";
 
 type Props = {};
 
@@ -18,23 +19,9 @@ const Content = (props: Props) => {
         <div>
           <p className={styles.heading}>Heading</p>
           <div className={styles.content}>
-            {activeLink === "about" && (
-              <p className={styles.paragraph}>{<About />}</p>
-            )}
-            {activeLink === "skills" && (
-              <p className={styles.paragraph}>{<Skills />}</p>
-            )}
-            {activeLink === "experience" && (
-              <p className={styles.paragraph}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias necessitatibus architecto laudantium numquam magni
-                incidunt vel nulla laboriosam maiores? Molestiae qui recusandae
-                debitis aut ipsa! Quisquam nam nobis corrupti iste. us
-                architecto laudantium numquam magni incidunt vel nulla
-                laboriosam maiores? Molestiae qui recusandae debitis aut ipsa!
-                Quisquam nam nobis corrupti iste.
-              </p>
-            )}
+            {activeLink === "about" && <About />}
+            {activeLink === "skills" && <Skills />}
+            {activeLink === "experience" && <Experience />}
           </div>
         </div>
       </div>
