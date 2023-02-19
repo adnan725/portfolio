@@ -18,8 +18,23 @@
     }
 
     .content {
-      border-left: 2px solid $color-secondary;
       padding-left: 1.5rem;
+      border-image-slice: 1;
+      transition: all 300ms;
+      border-left: 2px solid $color-secondary;
+      border-image-source: linear-gradient(
+        to bottom,
+        $color-green,
+        $color-pink
+      );
+
+      &:hover {
+        border-image-source: linear-gradient(
+          to bottom,
+          $color-pink,
+          $color-green
+        );
+      }
     }
   }
 
@@ -27,19 +42,50 @@
     height: 100%;
     flex-basis: 30%;
     position: relative;
+    border-top-left-radius: 10px;
     @include flex(row, center, flex-start);
 
-    &::before {
+    &::before,
+    &::after {
       content: "";
       display: block;
-      width: 6rem;
-      height: 6rem;
+      width: 5rem;
+      height: 5rem;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      border-top-left-radius: 10px;
-      border-top: 2px solid $color-secondary;
+      border-image-slice: 1;
+      transition: all 300ms;
+    }
+
+    &::before {
       border-left: 2px solid $color-secondary;
+      border-image-source: linear-gradient(
+        to bottom,
+        $color-green,
+        $color-pink
+      );
+
+      &:hover {
+        border-image-source: linear-gradient(
+          to bottom,
+          $color-pink,
+          $color-green
+        );
+      }
+    }
+
+    &::after {
+      border-top: 2px solid $color-secondary;
+      border-image-source: linear-gradient(to left, $color-pink, $color-green);
+
+      &:hover {
+        border-image-source: linear-gradient(
+          to left,
+          $color-pink,
+          $color-green
+        );
+      }
     }
 
     .projectsHeading {
@@ -52,17 +98,13 @@
       top: 40%;
       gap: 1.3rem;
       z-index: 111111;
-      padding: 2.5rem;
+      padding: 2.5rem 0 2.5rem 2rem;
       position: absolute;
       @include flex(column, flex-start, center);
 
       .borderGredient {
-        border: 2px solid;
-        border-width: 1px;
+        border: 1px solid;
         border-image-slice: 1;
-      }
-
-      .borderColor {
         border-image-source: linear-gradient(
           to left,
           $color-green,
@@ -97,6 +139,7 @@
 
 @media (max-width: 900px) {
   .container {
+    gap: 0;
     padding: 0 3rem;
     @include flex(column, "", center);
 
@@ -106,11 +149,20 @@
     }
 
     .descriptionWrapper {
+      padding-left: 0;
       flex-basis: 53%;
     }
 
     .linksWrapper {
       flex-basis: 45%;
     }
+  }
+
+  .projectsHeading {
+    top: 5% !important;
+  }
+
+  .links {
+    padding: 0.5rem 0 0 1.5rem !important;
   }
 }
